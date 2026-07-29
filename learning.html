@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Journey - Kelvin Lee</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <a href="index.html">Kelvin Lee</a>
+            </div>
+            <nav aria-label="Main navigation" class="navigation">
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="learning.html" class="active">Learning</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            
+            <section class="hero">
+                <h2>My Learning Journey</h2>
+                <p>Documenting my process, challenges, and key takeaways from building this portfolio with HTML & CSS.</p>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Key Concepts I Learned & Major Challenges</h2>
+                    
+                <div class="learning-cards">
+                        
+                    <div class="learning-card">
+                        <div class="card-content">
+                            <h4>1. HTML Character Entities (<code>&amp;lt;</code> and <code>&amp;gt;</code>)</h4>
+                            <p>I learned that certain characters like <code>&lt;</code> and <code>&gt;</code> have special meaning in HTML
+                                 and cannot be typed directly in text content. To display these characters, I must use <strong>HTML
+                                     character entities</strong>: <code>&amp;lt;</code> for the less-than symbol (<code>&lt;</code>) and
+                                      <code>&amp;gt;</code> for the greater-than symbol (<code>&gt;</code>). This is essential when 
+                                      showing code examples like <code>&lt;header&gt;</code> without the browser interpreting them 
+                                      as actual HTML tags.</p>
+                                <img src="Images/Card1.png" alt="Image for HTML Entities" class="learning-card-img">
+                                
+                                <div class="code-box">
+                                    <div class="code-example">
+                                        <h5>Code</h5>
+                                        <pre>
+                                            &lt;p&gt;This is the &amp;lt;header&amp;gt; tag.&lt;/p&gt;
+                                        </pre>
+                                    </div>
+                                    <div class="code-example">
+                                        <h5>Output</h5>
+                                        <div class="output">This is the &lt;header&gt; tag.</div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="learning-card">
+                        
+                        <div class="card-content">
+                            <h4>2. The Inline <code>&lt;code&gt;</code> Element</h4>
+                            <p>The <code>&lt;code&gt;</code> element is an inline semantic tag used to define a short piece of 
+                                computer code. It visually distinguishes code fragments within a paragraph, often displaying them in a 
+                               <code> monospace font</code> in this case, background and font-color. This was particularly useful for <code>highlighting</code> important elements or keywords
+                                 directly within my descriptive paragraphs about HTML and CSS concepts.,
+                            </p>
+                                 <img src="Images/Card2.png" alt="Image for Code Element" class="learning-card-img">
+
+                                 <div class="code-box">
+                                    <div class="code-example">
+                                        <h5>Code</h5>
+                                        <pre>
+                                            Use the &lt;code&gt;div&lt;/code&gt; element.
+                                        </pre>
+                                    </div>
+                                    <div class="code-example">
+                                        <h5>Output</h5>
+                                        <div class="output">Use the <code>div</code> element.</div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="learning-card">
+                        
+                        <div class="card-content">
+                            <h4>3. The Block-Level <code>&lt;pre&gt;</code> Element</h4>
+                            <p>The <code>&lt;pre&gt;</code> (Preformatted Text) element is a block-level tag that preserves
+                                 all whitespace and line breaks exactly as they are written in the source HTML file. This is crucial 
+                                 for displaying multi-line code snippets or structured text where exact formatting must be maintained.</p>
+                                 <img src="Images/Card3.png" alt="Image for Pre Element" class="learning-card-img">
+
+                                 <div class="code-box">
+                                    <div class="code-example">
+                                        <h5>Code</h5>
+                                        <pre>
+                                            &lt;pre&gt;
+                                                function main() {
+                                                    console.log("Hello!");
+                                                }
+                                            &lt;/pre&gt;
+                                        </pre>
+                                    </div>
+                                    <div class="code-example">
+                                        <h5>Output</h5>
+                                        <div class="output">
+                                            <pre style="text-align: left; background: none; border: none; padding: 0;">
+                                                function main() {
+                                                    console.log("Hello!");
+                                                }
+                                            </pre>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="learning-card">
+                        
+                        <div class="card-content">
+                            <h4>4. CSS <code>z-index</code> for Stacking</h4>
+                            <p>The <code>z-index</code> property controls the stacking order of elements that overlap. An element
+                                with a higher <code>z-index</code> will always appear in front of an element with a lower value. 
+                                This was essential for ensuring my icon remained visible above other content.
+                            </p>
+                                <img src="Images/Card4.png" alt="Image for Z-Index" class="learning-card-img">
+                        </div>
+                    </div>
+
+                    <div class="learning-card">
+                        
+                        <div class="card-content">
+                            <h4>5. Responsive Design with <code>@media</code> Queries</h4>
+                            <p>I implemented <code>@media queries</code>to make the portfolio responsive. This CSS technique applies
+                                 different style rules based on device characteristics, such as the screen width
+                                  (<code>max-width: 768px;</code>). This allows the layout to seamlessly adapt from a desktop view to a
+                                   mobile view.</p>
+                                   <img src="Images/Card5.png" alt="Image for Media Queries" class="learning-card-img">
+                        </div>
+                    </div>
+
+                    <div class="learning-card">
+                        
+                        <div class="card-content">
+                            <h4>6. CSS <code>transform: translateY()</code></h4>
+                            <p>I used the <code>transform</code> property with the <code>translateY()</code> function to create
+                                 subtle movement effects. By setting a small value like <code>translateY(-4px)</code> on a hover state,
+                                  I made buttons and cards appear to lift off the page, adding a professional, interactive touch to 
+                                  the UI.</p>
+                                <img src="Images/Card6_Btn.png" alt="Image for Transform" class="learning-card-img">
+                                <img src="Images/Card6_project.png" alt="Image for Transform" class="learning-card-img">
+                        </div>
+                    </div>
+
+                    <div class="learning-card">
+                      
+                        <div class="card-content">
+                            <h4>7. CSS Grid Layout System</h4>
+                            <p>I learned to use <code>CSS Grid</code> to create the complex, two-dimensional layout for my project
+                                 gallery and learning cards. It made defining both <code>rows and columns</code> simultaneously 
+                                 simple, giving me precise control over the overall page structure and alignment of my content.</p>
+                                   <img src="Images/Card7.png" alt="Image for CSS Grid" class="learning-card-img">
+                        </div>
+                    </div>
+                        
+                    <div class="learning-card challenge-card">
+                        
+                        <div class="card-content">
+                            <h4>Problem 1: Neon Colors Not Displaying Correctly</h4>
+                            <p>I tried to use CSS custom properties (variables) for my neon color theme (<code>--color-primary</code>, <code>--primary-secondary</code>), but they weren't being applied consistently across all elements, with some sections falling back to default colors.</p>
+                            <div class="learning-point">
+                                <strong>Solution:</strong> I discovered I hadn't defined the variables in the <code>:root</code> pseudo-class at the top of my CSS file. After declaring them globally with <code>:root { --color-primary: #00FFFF; }</code>, I could reliably reference them throughout the stylesheet using <code>var(--color-primary)</code>.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="learning-card challenge-card">
+                       
+                        <div class="card-content">
+                            <h4>Problem 2: "Class" Naming Issue</h4>
+                            <p>When I want to make changes to the styling from the CSS file, I would occasionally get lost and take a long time to find the specific section I needed to edit. This slowed down my workflow significantly.</p>
+                            <div class="learning-point"> 
+                                <strong>Solution:</strong> The problem was solved using the <code>Ctrl+Shift-F</code> Search Tool. I can instantly find assigned class name in both<code>HTML</code>and <code>CSS</code> files by searching for the class name directly. This drastically improved my efficiency when making <code>style adjustments</code>.
+                            </div>
+                        </div>
+                    </div>
+                        
+                </div> </section>
+            
+           
+
+            <section class="section">
+                <h2 class="section-title">My Portfolio Development Timeline</h2>
+                <div class="timeline">
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Phase 1: Structure & Semantics</h3>
+                            
+                            <p>Established the core structure using semantic HTML
+                                (<code>&lt;header&gt;</code>,<code>&lt;main&gt;</code><code>&lt;footer&gt;</code>). Focused
+                                on logical document flow and accessibility.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Phase 2: Core Styling & Variables</h3>
+                            <p>Implemented the <code>external stylesheet</code> and <code>CSS variables</code> for the neon theme. Applied base typography and styling for a consistent dark-mode look.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Phase 3: Layouts & Responsiveness</h3>
+                            <p>Integrated <code>CSS Grid</code> for complex layouts and added <code>@media queries</code> to ensure full responsiveness across mobile and desktop, including fixing image scaling issues.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+             <section class="section">
+                <h2 class="section-title">How AI/GenAI helped (requested features, explain code, suggestions)</h2>
+                <div class="learning-card ai-card">
+                   
+                    <div class="card-content">
+                        <h4>Code Explanation: Efficient CSS Grid Layout</h4>
+                        <p>I used AI assistance to clarify and design  in the most efficient way. Once instance was during the making of project gallery grid, I ask Chatgpt to  compare manual column definition versus the <code>repeat()</code> function.</p>
+                        <div class="ai-prompt">
+                            <strong>My Prompt to AI:</strong> "What is the difference between <code>grid-template-columns: 1fr 1fr;</code> and <code>repeat(2, 1fr);</code> in CSS?"
+                        </div>
+                        
+                        <h5 >Result: Code and Explanation of Contribution</h5>
+                        <div class="code-snippet">
+<pre>
+/* Before AI Suggestion (Manual) */
+grid-template-columns:<code>1fr 1fr 1fr 1fr; </code> 
+
+/* After AI Suggestion (DRY Method) */
+grid-template-columns: <code>repeat(4, 1fr);</code> 
+</pre>
+                        </div>
+                        <p><strong>Contribution:</strong> The AI confirmed both methods produce the same visual result but suggested using the <code>repeat()</code> function for better readability and adherence to the DRY principle. I adopted this approach to make my CSS cleaner and easier to scale for future projects, moving from repetitive code to the compact <code>repeat(N, 1fr)</code> syntax.</p>
+                        <br><p class="ai-contribute">Overall AI has Contributed to my learning by <strong>Suggestions</strong> and <strong>Explanation</strong>.</p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-nav">
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="learning.html">Learning</a>
+                </nav>
+            </div>
+            <div class="footer-contact">
+                <br><h4>Contact Me!</h4>
+                <p><a class="contact-link"href="mailto:someone@example.com">Send email</a></p>
+
+                <p><a class="contact-link"href="tel:+4712341234">+47 123 41 234</a></p>
+
+                <p><a class="contact-link"href="http://www.facebook.com/YOURUSERNAMEHERE" target="_blank" rel="noopener noreferrer">Follow me on Facebook</a></p>
+            </div>
+        </div>
+        <p class="copyright">© 2025 Kelvin Lee Khai Wing. All rights reserved. | ITE College Central - AI Application Student</p>
+    </footer>
+</body>
+</html>
