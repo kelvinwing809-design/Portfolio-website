@@ -1,73 +1,52 @@
-That happens when you **highlight and copy the rendered preview text** off the screen instead of copying the **raw Markdown text inside the code box**.
-
-When you copy formatted text directly off the chat screen, your browser strips away the hidden Markdown symbols (like `#`, `*`, backticks ```, and newlines `\n`), causing all the text and links to collapse into one giant messy paragraph!
-
----
-
-### 💡 How to Fix It
-
-1. **Use the "Copy" Button:** Hover over the top-right corner of the black code box in our chat window and click the **Copy** button (or click inside the box, press `Ctrl + A` / `Cmd + A`, and copy).
-2. **Paste into your editor:** Paste it directly into your `README.md` file in VS Code or GitHub.
-
----
-
-### 📝 Clean, Ready-to-Copy Version (GitHub-Safe)
-
-Here is a clean, formatted Markdown block for your **Playing Card Classification** project (with standard arrows `→` instead of LaTeX so GitHub displays it cleanly):
-
 ```markdown
-# 🃏 Playing Card Classification using Deep Learning
+# 💻 Personal Portfolio Website
 
-A Computer Vision and Deep Learning project developed for the ITE Higher NITEC in AI Applications course. This project classifies playing cards into 53 distinct categories (52 standard cards + 1 Joker card) using a Convolutional Neural Network (CNN) built with TensorFlow, Keras, and OpenCV.
+A front-end web development project built for the **ITE Higher NITEC Web Development Essentials** module. This is a responsive, multi-page portfolio site built from scratch using semantic HTML5, modern CSS3, and vanilla JavaScript — showcasing layout design, styling patterns, and client-side interactivity techniques.
 
 ---
 
 ## 📖 Project Overview
 
-Accurate image classification across varying lighting, background clutter, and card rotations can be challenging for standard computer vision algorithms. This project leverages Deep Convolutional Neural Networks (CNNs) to perform accurate card recognition:
+This project is a personal multi-page web portfolio composed of three core linked pages:
 
-* **Phase 1 — Baseline CNN Model:** Data preprocessing, image resizing, and training a standard sequential CNN model.
-* **Phase 2 — Advanced Augmentation & Regularisation:** Enhancing generalization by implementing real-time data augmentation (rotation, shear, zoom) and Dropout layers to combat overfitting.
+* **Home (`index.html`):** Hero section, About Me biography, and an interactive collapsible skills dropdown.
+* **Projects (`projects.html`):** A responsive project grid displaying status badges (*Complete* / *Pending*) and technology tags.
+* **Learning Journey (`learning.html`):** A documented walkthrough of 7 core web development concepts mastered during the module, complete with code snippets, reflections, and live interactive demos.
 
-The primary goal is to achieve reliable multi-class classification across 53 distinct card types while maintaining low inference latency.
+The main goal was to advance beyond static styling by creating a polished, fully responsive site utilizing clean design tokens and modular JavaScript.
 
 ---
 
 ## 🛠 Technologies Used
 
-* Python 3.x
-* TensorFlow / Keras
-* OpenCV (image reading, color space conversion, resizing)
-* scikit-learn (evaluation metrics, confusion matrix)
-* NumPy / Pandas
-* Matplotlib / Seaborn
-* Jupyter Notebook / VS Code
+* **HTML5:** Semantic markup structure (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`)
+* **CSS3:** Custom properties (`:root`), Grid, Flexbox, Keyframe animations, Transitions
+* **Vanilla JavaScript (ES6+):** DOM manipulation, event listeners, dynamic class toggling, dynamic calculations
+* **Design System:** Shared CSS variables for typography, spacing, and color palettes
+* **Tools:** Visual Studio Code, Browser DevTools
 
 ---
 
-## 🧠 AI Techniques
+## 🎨 Key Concepts Implemented
 
-### Data Preprocessing & Pipeline
-* **Image Normalization:** Rescaling pixel values from `[0, 255]` to `[0, 1]` for stable gradient descent.
-* **OpenCV Preprocessing:** Standardized image dimensions (224x224) and color space adjustments.
-* **Data Augmentation:** Real-time geometric transformations including random rotation (±15°), width/height shifts, zoom, and horizontal flips.
-
-### Model Architecture
-* **Convolutional Layers (`Conv2D`):** Feature extraction utilizing 3x3 filters with ReLU activation to capture low-level edge features up to high-level card suit/rank patterns.
-* **Pooling Layers (`MaxPooling2D`):** Spatial downsampling using 2x2 max pooling to reduce computational complexity and introduce translation invariance.
-* **Regularisation (`Dropout`):** Randomly deactivating 30%–50% of neurons during training to prevent co-adaptation and overfitting.
-* **Dense Classification Head:** Fully connected layers culminating in a 53-unit `Softmax` output layer for multi-class probability distribution.
+1. **Hover Shadow Effect:** Smooth elevation animation on project cards using `transform`, `box-shadow`, and `transition`.
+2. **Animated Navigation Underline:** Active and hover menu indicator using `::after` pseudo-elements with `width` transitions.
+3. **Collapsible Skills Dropdown:** Interactive section driven by JavaScript `classList.toggle()` driving dynamic `max-height` transitions.
+4. **Fade-In Animation:** Entrance visual effects using `@keyframes` controlling `opacity` and `translateY`.
+5. **CSS Grid Layout:** Multi-column grid system (`2fr / 1fr`) that automatically collapses into a single column on mobile devices.
+6. **Image Hover Transform:** Chained `scale()` and `rotate()` transform effects on the hero section profile image.
+7. **Scroll Progress Bar:** Fixed top progress indicator dynamically calculated via client scroll height in JavaScript.
 
 ---
 
-## 📊 Results
+## 📊 Pages & Feature Breakdown
 
-| Model Configuration | Training Accuracy | Test Accuracy | Overfitting Gap |
-| :--- | :---: | :---: | :---: |
-| Baseline CNN (No Augmentation) | 98.10% | 88.40% | 9.70% |
-| **Augmented CNN + Dropout** | **95.60%** | **93.85%** | **1.75%** |
-
-Applying data augmentation and Dropout regularisation reduced the train-test accuracy gap significantly from **9.70%** down to **1.75%**, demonstrating robust model generalization on unseen card images.
+| Page | Key Features & Highlights |
+| :--- | :--- |
+| **Home (`index.html`)** | Hero banner, About Me section, animated skills dropdown, profile image transform effects |
+| **Projects (`projects.html`)** | Responsive card grid layout, project status badges, tech stack tags |
+| **Learning Journey (`learning.html`)** | 7 expandable concept cards, embedded code snippets, interactive live demos, module reflection |
+| **Site-Wide Features** | Sticky navigation header with active state underline, real-time scroll progress bar, media queries |
 
 ---
 
@@ -75,18 +54,16 @@ Applying data augmentation and Dropout regularisation reduced the train-test acc
 
 ```text
 .
-├── notebooks/
-│   └── card_classification.ipynb   # Model training & experimentation notebook
-├── scripts/
-│   ├── train.py                    # Training script
-│   └── predict.py                  # Inference script for test images
-├── learningLog.md                  # Concepts, implementation notes & reflections
-├── requirements.txt                # Dependencies list
+├── index.html          # Home page
+├── projects.html       # Projects showcase page
+├── learning.html       # Learning Journey (7 documented concepts)
+├── styles.css          # Core stylesheet (Design tokens + Global styles)
+├── script.js           # Client-side JavaScript interactivity
 ├── README.md
-└── dataset/                        # Card dataset (53 classes)
-    ├── train/
-    ├── test/
-    └── valid/
+└── images/             # Profile photos and project assets
+    ├── profile.jpg
+    ├── project1.png
+    └── project2.png
 
 ```
 
@@ -96,42 +73,29 @@ Applying data augmentation and Dropout regularisation reduced the train-test acc
 
 1. **Clone this repository:**
 ```bash
-git clone [https://github.com/stazerwee-ui/playing-card-classification.git](https://github.com/stazerwee-ui/playing-card-classification.git)
-cd playing-card-classification
+git clone [https://github.com/kelvinwing809-design/ITE-Web-Development-Essentials.git](https://github.com/kelvinwing809-design/ITE-Web-Development-Essentials.git)
+cd ITE-Web-Development-Essentials
 
 ```
 
 
-2. **Install required dependencies:**
-```bash
-pip install tensorflow opencv-python scikit-learn pandas numpy matplotlib seaborn
+2. **Open the project:**
+Simply open `index.html` directly in any web browser — no build tools, Node.js packages, or external dependencies are required!
+3. *(Optional)* **Live Server:** Open the project folder in VS Code and click **Go Live** using the Live Server extension for automatic reloading.
 
-```
+### 🌐 Live Hosting via GitHub Pages
 
-
-3. **Place your dataset inside the `dataset/` directory** following the `train/`, `test/`, and `valid/` folder structure.
-4. **Train the model:**
-```bash
-python scripts/train.py
-
-```
-
-
-5. **Run inference on a custom image:**
-```bash
-python scripts/predict.py --image path/to/sample_card.jpg
-
-```
-
-
+1. Navigate to your GitHub repository settings: **Settings → Pages**.
+2. Select the **`main`** branch and folder **`/root`**, then click **Save**.
+3. Access your live portfolio at: `https://kelvinwing809-design.github.io/Portfilo-website/`
 
 ---
 
 ## 📸 Sample Results
 
-* Training vs. Validation Loss and Accuracy curves showing smooth convergence.
-* 53x53 Confusion Matrix highlighting subtle suit misclassifications (e.g., 8 of Spades vs. 8 of Clubs).
-* Live prediction visualizer showing input image, predicted class label, and confidence score percentage.
+* Responsive desktop and mobile layouts for all 3 pages.
+* Expandable concept cards on the Learning Journey page showing dynamic state changes.
+* Smooth transitions during hover states and scroll navigation.
 
 ---
 
@@ -139,12 +103,14 @@ python scripts/predict.py --image path/to/sample_card.jpg
 
 Through this project, I learned:
 
-* How Convolutional layers learn spatial hierarchies from raw pixels (edges → shapes → card symbols).
-* The crucial role of Data Augmentation in preventing spatial overfitting on fixed camera angles.
-* How to handle high-cardinality multi-class classification problems (53 classes) using Categorical Cross-Entropy.
-* Balancing spatial feature retention against spatial resolution reduction using Max Pooling.
-* Diagnosing overfitting using training/validation loss curves and tuning Dropout rates accordingly.
-* Using OpenCV for efficient image loading, resizing, and batch data processing.
+* Designing responsive layouts using a hybrid of CSS Grid and Flexbox.
+* Establishing reusable design tokens using CSS variables (`:root`) for maintainable color/typography management.
+* Creating smooth micro-interactions using CSS `transitions`, `transforms`, and `@keyframes`.
+* Utilizing CSS pseudo-elements (`::after`, `::before`) and pseudo-classes (`:hover`, `:focus`).
+* Connecting JavaScript DOM event listeners to dynamic CSS classes to build toggleable components.
+* Dynamically calculating viewport scroll positions in JavaScript (`window.scrollY`) to power a live scroll progress bar.
+* Understanding absolute positioning contexts relative to parent elements (`position: relative` vs `position: absolute`).
+* Structuring multi-page static websites with clean shared stylesheets and consistent navigation states.
 
 ---
 
@@ -156,7 +122,7 @@ Through this project, I learned:
 
 * 💼 **LinkedIn:** [Kelvin Lee](https://www.linkedin.com/in/kelvin-lee-khai-wing-806195375)
 * 📧 **Email:** kelvinwing809@gmail.com
-* 🐙 **GitHub:** [@stazerwee-ui](https://github.com/stazerwee-ui)
+* 🐙 **GitHub:** [@kelvinwing809-design](https://github.com/kelvinwing809-design)
 
 ```
 
